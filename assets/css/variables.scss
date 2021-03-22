@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/*
+Colors
+*/
+$theme: #282832;
+
+$m-breakpoints: (
+  'xs': 'screen and (max-width: 374px)',
+  'sm': 'screen and (max-width: 600px)',
+  'md': 'screen and (max-width: 800px)',
+  'lg': 'screen and (max-width: 1000px)',
+  'xl': 'screen and (max-width: 1250px)',
+  'xxl': 'screen and (max-width: 1400px)',
+) !default;
+
+@mixin mq($m-breakpoint: md) {
+  @media #{map-get($m-breakpoints, $m-breakpoint)} {
+    @content;
+  }
+}
