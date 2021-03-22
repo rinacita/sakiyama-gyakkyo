@@ -35,7 +35,7 @@
     .movie__title.title Movie
     .movie__content
       <iframe width="100%" height="100%" src="https://www.youtube.com/embed/x8h0CCHaYhE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    .movie__description 【公式】「ドラマ賭ケグルイ双」60秒予告 <br>3.26配信開始
+    .movie__description 【公式】「ドラマ賭ケグルイ双」60秒予告 <br>3.26配信開始 {{ informations }}
   #topics.topics
     .topics__title.title Topics
     .topics__content
@@ -47,12 +47,27 @@
 </template>
 
 <script>
+import axios from 'axios'
 import topicData from '~/assets/data/topics.json'
 
 export default {
+  async asyncData({ params }) {
+    const { data: res } = await axios.get(
+      `http://www.sonymusic.co.jp/json/artist/soshisakiyama/information/start/0/count/5`
+    )
+    return { informations: res }
+  },
   data: () => {
     return {
       topicItems: topicData,
+      options: {
+        licenseKey: '96902202-2C234D9A-858D0BC1-342E4725',
+        controlArrows: true,
+        // scrollBar: true,
+        scrollOverflow: true,
+        scrollOverflowReset: true,
+        // afterLoad: this.afterLoad,
+      },
     }
   },
 }

@@ -24,7 +24,7 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/plugins/fullpage', mode: 'client' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -36,7 +36,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['nuxt-webfontloader'],
+  modules: ['nuxt-fullpage.js', 'nuxt-webfontloader'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
