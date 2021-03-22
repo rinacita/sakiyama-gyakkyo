@@ -5,9 +5,18 @@
       a Sakiyama Soushi
       h3 31 March 2021
     .nav__box.right-nav
-      a Topics  
-      a Movie 
-      a Top
+      a(href="#topics") Topics  
+      a(href="#movie") Movie 
+      a(href="#top") Top
+    .nav__box.bottom-nav
+      a(href="https://twitter.com/soushiclub")
+        img(src="~/assets/image/twitter.svg")
+      a(href="https://www.instagram.com/soush.i_sakiyama/")
+        img(src="~/assets/image/instagram.svg")
+      a(href="https://www.tiktok.com/@sakiyamasoushi_official")
+        img(src="~/assets/image/tiktok.svg")
+      a(href="https://www.youtube.com/channel/UCBrgK9ZtiUn0Gmn3cruQBkA")
+        img(src="~/assets/image/youtube.svg")
   #top
     .top__inner
       .top__inner-item.top__inner-item__title
@@ -27,13 +36,26 @@
     .movie__content
       <iframe width="100%" height="100%" src="https://www.youtube.com/embed/x8h0CCHaYhE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     .movie__description 【公式】「ドラマ賭ケグルイ双」60秒予告 <br>3.26配信開始
-  #topics
+  #topics.topics
     .topics__title.title Topics
+    .topics__content
+      .topics__content-item(v-for="item in topicItems" :key="item.id")
+        .topics__content-item-title {{ item.title }}
+        .topics__content-item-description {{ item.description }}
   footer
+    p Copyright &copy; Sony Music Records <br>All rights reserved.
 </template>
 
 <script>
-export default {}
+import topicData from '~/assets/data/topics.json'
+
+export default {
+  data: () => {
+    return {
+      topicItems: topicData,
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -103,6 +125,47 @@ export default {}
           height: 20px;
           border-radius: 10px;
           margin-left: 16px;
+        }
+
+        &:hover {
+          color: $theme;
+          background: white;
+        }
+      }
+    }
+
+    &.bottom-nav {
+      display: flex;
+      flex-direction: row-reverse;
+      bottom: 0;
+      right: 0;
+      padding: 32px;
+
+      > a {
+        $width: 48px;
+        display: flex;
+        width: $width;
+        height: $width;
+        background: $theme;
+        border-radius: calc(#{$width}/ 2);
+        border: 1px solid $theme;
+        justify-content: center;
+        margin-left: 16px;
+
+        @include mq(sm) {
+          $width: 40px;
+          width: $width;
+          height: $width;
+          border-radius: calc(#{$width}/ 2);
+        }
+
+        > img {
+          width: 50%;
+          height: auto;
+        }
+
+        &:hover {
+          opacity: 0.7;
         }
       }
     }
@@ -293,7 +356,7 @@ export default {}
 .title {
   font-size: 2.4rem;
   font-weight: bold;
-  margin-bottom: 64px;
+  margin-bottom: 48px;
 
   @include mq(sm) {
     font-size: 1.8rem;
@@ -319,18 +382,21 @@ export default {}
 
   &__content {
     $content-width: 50vw;
+    height: calc(#{$content-width} / 16 * 9);
+    width: $content-width;
     margin-bottom: 48px;
 
     @include mq(lg) {
       $content-width: 75vw;
+      height: calc(#{$content-width} / 16 * 9);
+      width: $content-width;
     }
 
     @include mq(sm) {
       $content-width: 90vw;
+      height: calc(#{$content-width} / 16 * 9);
+      width: $content-width;
     }
-
-    height: calc(#{$content-width} / 16 * 9);
-    width: $content-width;
   }
 
   &__description {
@@ -352,20 +418,56 @@ export default {}
   }
 }
 
-#topics {
+.topics {
   width: 100%;
-  height: 40vh;
-  background: white;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 64px;
+
+  &__content {
+    max-width: 600px;
+    &-item {
+      &-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      &-description {
+        font-size: 1rem;
+        font-weight: 300;
+        white-space: pre-wrap;
+        line-height: 1.4rem;
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 32px;
+      }
+    }
+  }
 }
 
 footer {
   width: 100%;
-  height: 40vh;
-  background: black;
+  height: 128px;
+  background: #464650;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  line-height: 0.75rem;
+
+  > p > br {
+    display: none;
+  }
+
+  @include mq(sm) {
+    > p > br {
+      display: inline;
+    }
+  }
 }
 </style>
