@@ -64,7 +64,7 @@ export default {
 .wrapper {
   width: 100%;
   height: 100vh;
-  font-family: 'Noto Sans JP';
+  // font-family: 'Noto Sans JP';
 }
 
 .nav {
@@ -140,6 +140,10 @@ export default {
       bottom: 0;
       right: 0;
       padding: 32px;
+
+      @include mq(sm) {
+        padding: 16px;
+      }
 
       > a {
         $width: 48px;
@@ -222,7 +226,7 @@ export default {
         grid-area: title;
         background: #363540;
         color: white;
-        font-weight: 500;
+        font-weight: 600;
 
         width: $grid-title-width;
         height: $grid-title-width;
@@ -274,7 +278,7 @@ export default {
 
         > h1 {
           font-size: 2vw;
-          font-weight: 500;
+          font-weight: 600;
           line-height: 3.2vw;
 
           &:first-of-type {
@@ -298,6 +302,7 @@ export default {
         @include mq(lg) {
           > h3 {
             font-size: 18px;
+            line-height: 18px;
             margin-bottom: 36px;
 
             > br {
@@ -307,6 +312,7 @@ export default {
 
           > h1 {
             font-size: 48px;
+            line-height: 28px;
 
             &:first-of-type {
               margin-bottom: 16px;
@@ -431,6 +437,7 @@ export default {
     &-item {
       &-title {
         font-size: 1.5rem;
+        font-weight: bold;
         margin-bottom: 1rem;
       }
 
