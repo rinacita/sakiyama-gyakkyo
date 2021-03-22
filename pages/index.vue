@@ -6,7 +6,7 @@
       h3 31 March 2021
     .nav__box.right-nav
       a(href="#topics") Topics  
-      a(href="#movie") Movie 
+      a(href="#movie") Movie
       a(href="#top") Top
     .nav__box.bottom-nav
       a(href="https://twitter.com/soushiclub")
@@ -20,9 +20,9 @@
   #top
     .top__inner
       .top__inner-item.top__inner-item__title
-        | 配信シングル<br>
-        | "逆&nbsp;行"<br>
-        | Special Site
+        //- | 配信シングル<br>
+        //- | "逆&nbsp;行"<br>
+        //- | Special Site
       .top__inner-item.top__inner-item__profile
       .top__inner-item.top__inner-item__jacket 
         img(src="~/assets/image/jacket.jpg")
@@ -224,7 +224,11 @@ export default {
         display: flex;
         align-items: center;
         grid-area: title;
-        background: #363540;
+        // background: #363540;
+        background-image: url('~@/assets/image/single_title.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         color: white;
         font-weight: 600;
 
@@ -297,6 +301,10 @@ export default {
         > a {
           font-size: 2vw;
           text-decoration: underline;
+
+          &:hover {
+            opacity: 0.5;
+          }
         }
 
         @include mq(lg) {
