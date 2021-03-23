@@ -5,7 +5,7 @@
     .topics__items
       .topics__item(v-for="item in topicItems" :key="item.id")
         .topics__item-title {{ item.title }}
-        .topics__item-article {{ item.article }}
+        .topics__item-article(v-html="autoLink(item.article)")
 
 </template>
 
@@ -25,6 +25,16 @@ export default {
     ).then((json) => {
       this.topicItems = json.items
     })
+  },
+  methods: {
+    autoLink(str) {
+      const regexpUrl = /((h?)(ttps?:\/\/[a-zA-Z0-9.\-_@:/~?%&;=+#',()*!]+))/g // ']))/;
+      const regexpMakeLink = function (all, url, h, href) {
+        return '<a href="h' + href + '" style="color: blue;">' + url + '</a>'
+      }
+
+      return str.replace(regexpUrl, regexpMakeLink)
+    },
   },
 }
 </script>
