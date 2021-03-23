@@ -279,7 +279,7 @@ export default {
 
       &__profile {
         grid-area: profile;
-        background-image: url('~@/assets/image/profile_white.png');
+        background-image: url('~@/assets/image/profile_black.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
