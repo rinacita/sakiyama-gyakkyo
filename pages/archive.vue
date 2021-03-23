@@ -56,7 +56,7 @@ import topicData from '~/assets/data/topics.json'
 export default {
   async asyncData({ params }) {
     const { data: res } = await axios.get(
-      `http://www.sonymusic.co.jp/json/artist/soshisakiyama/information/start/0/count/5`
+      `https://www.sonymusic.co.jp/json/artist/soshisakiyama/information/start/0/count/5`
     )
     return { informations: res }
   },

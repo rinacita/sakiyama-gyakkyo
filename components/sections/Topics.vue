@@ -18,7 +18,7 @@ export default {
   },
   async mounted() {
     await this.$jsonp(
-      'http://www.sonymusic.co.jp/json/artist/soshisakiyama/information/start/0/count/5',
+      'https://www.sonymusic.co.jp/json/artist/soshisakiyama/information/start/0/count/5',
       {
         callbackName: 'callback',
       }
