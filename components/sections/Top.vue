@@ -7,7 +7,7 @@
       .top__item.top__item-jacket
         img(src="~/assets/image/jacket.jpg")
       .top__item.top__item-text
-        h3 Amazon Prime Video ドラマ <br>「賭ケグルイ双（ツイン）」主題歌
+        h3 Amazon Prime Video ドラマ <br>「賭ケグルイ双（ツイン）」主題歌 test
         h1 崎山蒼志 <span>配信シングル</span><br> "逆&nbsp;行"
         h1 2021 3.31 web Release
         a(href="https://soushi.lnk.to/rYhw3ZA") Download &amp; Streaming &gt;
