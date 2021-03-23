@@ -456,7 +456,6 @@ export default {
 
 .topics {
   width: 100%;
-  background: red;
 
   display: flex;
   flex-direction: column;
