@@ -25,9 +25,8 @@ export default {
       {
         hid: 'og:url',
         property: 'og:url',
-        // ここ変更する
-        // content: 'https://www.sonymusic.co.jp/Music/Info/sakiyamasoushi/debut/',
-        content: 'https://',
+        content:
+          'https://www.sonymusic.co.jp/Music/Info/sakiyamasoushi/gyakkou/',
       },
       {
         hid: 'og:title',
@@ -44,9 +43,7 @@ export default {
         hid: 'og:image',
         property: 'og:image',
         content:
-          // ここ変更する
-          // 'https://www.sonymusic.co.jp/Music/Info/sakiyamasoushi/debut/img/ogp.png',
-          'https://',
+          'https://www.sonymusic.co.jp/Music/Info/sakiyamasoushi/gyakkou/img/ogp.jpg',
       },
       { name: 'twitter:card', content: 'summary_large_image' },
     ],
@@ -58,7 +55,8 @@ export default {
 
   router: {
     // ここ変更する
-    base: '/sakiyama-gyakkyo/',
+    // base: '/sakiyama-gyakkyo/',
+    base: '/Music/Info/sakiyamasoushi/gyakkou/',
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
