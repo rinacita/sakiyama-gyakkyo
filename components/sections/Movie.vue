@@ -3,9 +3,6 @@
   .movie__inner
     .movie__inner-title Movie
     .movie__inner-content 
-      <iframe width="100%" height="100%" src="//www.youtube.com/embed/axhqitECl1Y" frameborder="0" allowfullscreen></iframe>
-    .movie__inner-description 崎山蒼志 Soushi Sakiyama 「そのままどこか」<br>MUSIC VIDEO #ahamoX
-    .movie__inner-content 
       <iframe width="100%" height="100%" src="https://www.youtube.com/embed/x8h0CCHaYhE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     .movie__inner-description 【公式】「ドラマ賭ケグルイ双」60秒予告 <br>3.26配信開始
 

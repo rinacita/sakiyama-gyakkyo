@@ -24,7 +24,7 @@
   client-only
     full-page(:options="options" ref="fullpage")
       top.section(data-anchor="top")
-      movie.section(data-anchor="movie")
+      movie.fp-auto-height.section(data-anchor="movie")
       topics.section(data-anchor="topics")
       custom-footer.section.fp-auto-height(data-anchor="footer")
 </template>

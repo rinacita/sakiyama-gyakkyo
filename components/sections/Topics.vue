@@ -10,10 +10,12 @@
 </template>
 
 <script>
+import topicData from '~/assets/data/topics.json'
+
 export default {
   data() {
     return {
-      topicItems: '',
+      topicItems: topicData,
     }
   },
   async mounted() {
@@ -23,7 +25,7 @@ export default {
         callbackName: 'callback',
       }
     ).then((json) => {
-      this.topicItems = json.items
+      // this.topicItems = json.items
     })
   },
   methods: {
