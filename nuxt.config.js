@@ -4,14 +4,51 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'sakiyama-gyakkyo',
+    title: '崎山蒼志 3.31配信シングル「逆行」 Special Site',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'ja',
+      prefix: 'og: http://ogp.me/ns#',
     },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1, viewport-fit=cover',
+      },
       { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: '崎山蒼志 3.31配信シングル「逆行」 Special Site',
+      },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        // ここ変更する
+        // content: 'https://www.sonymusic.co.jp/Music/Info/sakiyamasoushi/debut/',
+        content: 'https://',
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: '崎山蒼志 3.31配信シングル「逆行」 Special Site',
+      },
+      // {
+      //   hid: 'og:description',
+      //   property: 'og:description',
+      //   content:
+      //     '崎山蒼志メジャーデビュー、決定。既存曲をバンドアレンジした「再定義」シリーズを配信。',
+      // },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content:
+          // ここ変更する
+          // 'https://www.sonymusic.co.jp/Music/Info/sakiyamasoushi/debut/img/ogp.png',
+          'https://',
+      },
+      { name: 'twitter:card', content: 'summary_large_image' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -20,6 +57,7 @@ export default {
   css: ['@/assets/css/common.scss'],
 
   router: {
+    // ここ変更する
     base: '/sakiyama-gyakkyo/',
   },
 
