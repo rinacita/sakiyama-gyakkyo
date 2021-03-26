@@ -42,7 +42,7 @@
   $t_horizontal_padding: calc((100vw - #{$t_jacket_height}) / 2);
 
   // -- Mobile
-  $m_vertical_padding: 56px;
+  $m_vertical_padding: 40px;
   $m_min_horizontal_padding: 40px;
   $m_jacket_height: min(
     (100vh - #{$m_vertical_padding} * 2) * (1 / 2),
@@ -188,7 +188,7 @@
         > h3 {
           font-size: 2vw;
           line-height: 3vw;
-          margin-bottom: 2vh;
+          margin-bottom: 1vh;
 
           > br {
             display: none;
