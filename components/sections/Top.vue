@@ -17,6 +17,7 @@
 @import '~/assets/css/variables.scss';
 
 .top {
+  // display: flex;
   width: 100%;
   background-image: url('~@/assets/image/background.png');
   background-repeat: no-repeat;
@@ -33,7 +34,7 @@
   $vertical_padding: calc((100vh - #{$jacket_width}) / 2);
 
   // -- Tablet
-  $t_vertical_padding: 80px;
+  $t_vertical_padding: 60px;
   $t_min_horizontal_padding: 40px;
   $t_jacket_height: min(
     (100vh - #{$t_vertical_padding} * 2) * (1 / 2),
@@ -43,7 +44,7 @@
 
   // -- Mobile
   $m_vertical_padding: 40px;
-  $m_min_horizontal_padding: 40px;
+  $m_min_horizontal_padding: 48px;
   $m_jacket_height: min(
     (100vh - #{$m_vertical_padding} * 2) * (1 / 2),
     100vw - #{$m_min_horizontal_padding} * 2
@@ -53,7 +54,7 @@
   &__inner {
     padding: $vertical_padding $horizontal_padding;
     width: 100%;
-    height: 100%;
+    // height: 100%;
     box-sizing: border-box;
 
     @include mq(lg) {
@@ -217,8 +218,8 @@
         }
 
         > a {
-          font-size: 6.4vw;
-          line-height: 6.4vw;
+          font-size: 3.6vw;
+          line-height: 4vw;
         }
       }
     }
