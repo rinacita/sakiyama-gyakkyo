@@ -93,10 +93,10 @@
       flex-direction: row-reverse;
       bottom: 0;
       right: 0;
-      padding: 32px;
+      // padding: 32px;
 
       @include mq(sm) {
-        padding: 16px;
+        // padding: 16px;
       }
 
       > a {
