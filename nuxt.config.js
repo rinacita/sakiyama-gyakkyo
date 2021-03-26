@@ -55,8 +55,8 @@ export default {
 
   router: {
     // ここ変更する
-    // base: '/sakiyama-gyakkyo/',
-    base: '/Music/Info/sakiyamasoushi/gyakkou/',
+    base: '/sakiyama-gyakkyo/',
+    // base: '/Music/Info/sakiyamasoushi/gyakkou/',
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
