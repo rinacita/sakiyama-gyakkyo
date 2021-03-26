@@ -5,27 +5,27 @@
     .topics__items
       .topics__item(v-for="item in topicItems" :key="item.id")
         .topics__item-title {{ item.title }}
-        .topics__item-article(v-html="autoLink(item.article)")
+        .topics__item-article(v-html="item.article")
 
 </template>
 
 <script>
-import topicData from '~/assets/data/topics.json'
+// import topicData from '~/assets/data/topics.json'
 
 export default {
   data() {
     return {
-      topicItems: topicData,
+      topicItems: '',
     }
   },
   async mounted() {
     await this.$jsonp(
-      'https://www.sonymusic.co.jp/json/artist/soshisakiyama/information/start/0/count/5',
+      'https://www.sonymusic.co.jp/json/v2/artist/soshisakiyama/information/list/start/0/count/999',
       {
         callbackName: 'callback',
       }
     ).then((json) => {
-      // this.topicItems = json.items
+      this.topicItems = json.items.articles
     })
   },
   methods: {
@@ -110,5 +110,9 @@ export default {
       margin-bottom: 64px;
     }
   }
+}
+
+a {
+  color: blue;
 }
 </style>
