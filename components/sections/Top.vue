@@ -10,7 +10,7 @@
         h3 Amazon Prime Video ドラマ <br>「賭ケグルイ双（ツイン）」主題歌
         h1 崎山蒼志 <span>配信シングル</span><br> "逆&nbsp;行"
         h1 2021 3.31 web Release
-        a(href="https://soushi.lnk.to/rYhw3ZA") Download &amp; Streaming &gt;
+        a(href="https://soushi.lnk.to/rYhw3ZAW") Download &amp; Streaming &gt;
 </template>
 
 <style lang="scss" scoped>
