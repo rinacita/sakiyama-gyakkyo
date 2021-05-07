@@ -6,6 +6,9 @@
       <iframe width="100%" height="100%" src="https://www.youtube.com/embed/aFR7TjHtG7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     .movie__inner-description 崎山蒼志 Soushi Sakiyama<br>「逆行」Music Video
     .movie__inner-content 
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/orO6hW7kA-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    .movie__inner-description 崎山蒼志が崎山蒼志を弾いてみた！～逆行～
+    .movie__inner-content 
       <iframe width="100%" height="100%" src="https://www.youtube.com/embed/x8h0CCHaYhE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     .movie__inner-description 【公式】「ドラマ賭ケグルイ双」60秒予告 <br>3.26配信開始
 
